@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>SphereDesk</AssemblyName>
+    <RootNamespace>SphereDesk.App</RootNamespace>
+    <Version>1.0.0</Version>
+    <Product>SphereDesk</Product>
+    <Description>Windows 球形桌面整理器</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SphereDesk.Application\SphereDesk.Application.csproj" />
+    <ProjectReference Include="..\SphereDesk.Windows\SphereDesk.Windows.csproj" />
+  </ItemGroup>
+
+</Project>

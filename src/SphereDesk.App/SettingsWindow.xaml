@@ -1,0 +1,25 @@
+<Window x:Class="SphereDesk.App.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="设置"
+        Width="460"
+        SizeToContent="Height"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        Background="{StaticResource App.Background}">
+    <StackPanel Margin="20">
+        <CheckBox x:Name="LaunchAtStartupBox" Content="开机自动启动" Foreground="{StaticResource App.Text}" Margin="0,0,0,12" />
+        <CheckBox x:Name="AutoRotateBox" Content="空闲时缓慢旋转" Foreground="{StaticResource App.Text}" Margin="0,0,0,12" />
+        <TextBlock Text="旋转速度" Foreground="{StaticResource App.Muted}" />
+        <Slider x:Name="SpeedSlider" Minimum="0" Maximum="2" TickFrequency="0.05" IsSnapToTickEnabled="False" Margin="0,6,0,12" />
+        <CheckBox x:Name="ReducedMotionBox" Content="减少动画（关闭自转、惯性和转场）" Foreground="{StaticResource App.Text}" Margin="0,0,0,16" />
+        <TextBlock Text="唤起热键" Foreground="{StaticResource App.Muted}" />
+        <TextBox x:Name="HotkeyBox" Margin="0,6,0,8" IsReadOnly="True" PreviewKeyDown="OnHotkeyKeyDown" />
+        <TextBlock Text="在上面的框中按下新的组合键。至少包含 Ctrl、Alt 或 Shift。默认是 Ctrl+Alt+D。" Foreground="{StaticResource App.Muted}" TextWrapping="Wrap" Margin="0,0,0,16" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="取消" Style="{StaticResource ChromeButton}" IsCancel="True" Margin="0,0,8,0" />
+            <Button Content="保存" Style="{StaticResource ChromeButton}" IsDefault="True" Click="OnSaveClick" />
+        </StackPanel>
+    </StackPanel>
+</Window>

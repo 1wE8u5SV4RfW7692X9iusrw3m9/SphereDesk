@@ -1,0 +1,16 @@
+<Window x:Class="SphereDesk.App.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="帮助"
+        Width="560"
+        Height="560"
+        WindowStartupLocation="CenterOwner"
+        ShowInTaskbar="False"
+        Background="{StaticResource App.Background}">
+    <DockPanel Margin="20">
+        <Button DockPanel.Dock="Bottom" Content="关闭" HorizontalAlignment="Right" Margin="0,16,0,0" Style="{StaticResource ChromeButton}" IsCancel="True" />
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <TextBlock TextWrapping="Wrap" LineHeight="22" Foreground="{StaticResource App.Text}" Text="{Binding}" />
+        </ScrollViewer>
+    </DockPanel>
+</Window>
